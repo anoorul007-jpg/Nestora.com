@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestora – Secure Online PG & Room Booking System | Affordable Luxury Living</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Nestora – Secure Online PG & Room Booking System">
+    <meta name="description" content="Find and book premium, affordable Single and Double PG rooms (AC & Non-AC) across India with Nestora. Zero brokerage, 200Mbps Wi-Fi, 3 meals/day, and secure OTP verification.">
+    <meta name="keywords" content="Nestora, Nestora PG, PG booking, paying guest, hostel rooms, single AC PG, double room PG, PG near me, student accommodation, luxury PG">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Nestora PG Management">
+
+    <!-- Open Graph / Facebook / WhatsApp Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nestora.in/">
+    <meta property="og:title" content="Nestora – Premium PG & Room Booking Management System">
+    <meta property="og:description" content="Explore verified PG rooms with AC, high-speed Wi-Fi, hygienic meals, and zero brokerage. Instant room reservations with instant mobile verification.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Nestora – Premium PG & Room Booking Management System">
+    <meta property="twitter:description" content="Explore verified PG rooms with AC, high-speed Wi-Fi, hygienic meals, and zero brokerage. Instant room reservations.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Structured Data (JSON-LD) for Google Search Engine Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Nestora PG & Room Management",
+      "description": "Premium student and professional PG accommodation with Single and Double AC/Non-AC rooms, 3 healthy meals, 200Mbps Wi-Fi, and 24/7 security.",
+      "url": "https://nestora.in/",
+      "telephone": "+919876543210",
+      "priceRange": "₹6,000 - ₹14,000 / month",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tech Hub Corridor",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "postalCode": "560100",
+        "addressCountry": "IN"
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "High-Speed Wi-Fi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Power Backup", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Hygienic Meals", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "CCTV Security", "value": true }
+      ]
+    }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Top Alert Bar -->
+    <div class="top-notice-bar">
+        <div class="container notice-content">
+            <span><i class="fa-solid fa-shield-halved"></i> 100% Verified PG Rooms with Cryptographic Mobile OTP Verification & Zero Brokerage</span>
+            <div class="notice-links">
+                <a href="#tracking-section" onclick="openPortalLookupModal()"><i class="fa-solid fa-compass"></i> Track My Booking</a>
+                <span class="divider">|</span>
+                <a href="#admin-login" onclick="openAdminModal()"><i class="fa-solid fa-lock"></i> Admin Portal</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Public Navigation Bar -->
+    <header class="navbar" id="public-navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand" onclick="scrollToSection('hero-section')">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-hotel"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">Nestora</span>
+                    <span class="brand-subtitle">PG & Room Booking</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero-section" class="nav-link active" onclick="scrollToSection('hero-section')">Home</a>
+                <a href="#rooms-section" class="nav-link" onclick="scrollToSection('rooms-section')">Available Rooms</a>
+                <a href="#categories-section" class="nav-link" onclick="scrollToSection('categories-section')">Categories</a>
+                <a href="#facilities-section" class="nav-link" onclick="scrollToSection('facilities-section')">Facilities</a>
+                <a href="#gallery-section" class="nav-link" onclick="scrollToSection('gallery-section')">Photos Gallery</a>
+                <a href="#about-section" class="nav-link" onclick="scrollToSection('about-section')">About Us</a>
+                <a href="#contact-section" class="nav-link" onclick="scrollToSection('contact-section')">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-secondary btn-sm" onclick="openPortalLookupModal()">
+                    <i class="fa-solid fa-magnifying-glass"></i> Track Booking
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="scrollToSection('registration-section')">
+                    <i class="fa-solid fa-calendar-check"></i> Book Now
+                </button>
+                <button class="menu-toggle" id="public-menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN PUBLIC CONTENT -->
+    <main id="public-content">
+        <!-- 1. Hero Section -->
+        <section id="hero-section" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-circle-check text-success"></i> Instant Online Booking with Verified Mobile Security
+                    </div>
+                    <h1>Premium, Verified PG & Rooms for Students and Working Professionals</h1>
+                    <p>Discover handpicked Single and Double rooms with AC / Non-AC facilities, attached washrooms, high-speed fiber Wi-Fi, nutritious homestyle meals, and real-time room availability.</p>
+                    
+                    <div class="hero-action-group">
+                        <button class="btn btn-primary btn-lg" onclick="scrollToSection('rooms-section')">
+                            <i class="fa-solid fa-bed"></i> Browse Available Rooms
+                        </button>
+                        <button class="btn btn-outline btn-lg" onclick="scrollToSection('registration-section')">
+                            <i class="fa-solid fa-user-plus"></i> Register Online
+                        </button>
+                    </div>
+
+                    <div class="hero-highlights">
+                        <div class="hh-item"><i class="fa-solid fa-shield"></i> Verified Security</div>
+                        <div class="hh-item"><i class="fa-solid fa-wifi"></i> 200 Mbps Wi-Fi</div>
+                        <div class="hh-item"><i class="fa-solid fa-utensils"></i> 3 Times Food</div>
+                        <div class="hh-item"><i class="fa-solid fa-bolt"></i> Power Backup</div>
+                    </div>
+                </div>
+
+                <div class="hero-card-preview">
+                    <div class="preview-badge"><i class="fa-solid fa-star text-warning"></i> Featured Suite</div>
+                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=700&q=80" alt="Nestora PG Room" class="preview-img">
+                    <div class="preview-info">
+                        <h4>Single Deluxe AC Room (R-101)</h4>
+                        <p><i class="fa-solid fa-location-dot text-danger"></i> Koramangala 4th Block, Near Sony World</p>
+                        <div class="preview-pricing">
+                            <span class="preview-rent">₹13,500 <small>/ month</small></span>
+                            <span class="badge-pill pill-available"><i class="fa-solid fa-circle-check"></i> Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Room Categories & Pricing Overview -->
+        <section id="categories-section" class="section bg-white">
+            <div class="container">
+                <div class="section-title-wrap text-center">
+                    <span class="section-subtitle">Room Categories & Pricing</span>
+                    <h2>Transparent Room Options for Every Budget</h2>
+                    <p>Choose between private Single suites or social Double sharing accommodations with AC and Non-AC climate options.</p>
+                </div>
+
+                <div class="categories-grid" id="categories-container">
+                    <!-- Populated dynamically via public_rooms.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Available Rooms Explorer -->
+        <section id="rooms-section" class="section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <div class="title-flex">
+                        <div>
+                            <span class="section-subtitle">Real-time Inventory</span>
+                            <h2>Available Rooms Ready for Booking (<span id="available-rooms-count">0</span>)</h2>
+                        </div>
+                        <p class="subtitle">Live room availability updated automatically upon customer bookings and checkouts.</p>
+                    </div>
+                </div>
+
+                <!-- Room Filters -->
+                <div class="filter-card">
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label><i class="fa-solid fa-user-group"></i> Category</label>
+                            <select id="pub-filter-category">
+                                <option value="All">All Categories</option>
+                                <option value="Single">Single Room (Private)</option>
+                                <option value="Double">Double Room (2 Beds)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label><i class="fa-solid fa-snowflake"></i> Climate Control</label>
+                            <select id="pub-filter-ac">
+                                <option value="All">All Climate Types</option>
+                                <option value="AC">AC Room</option>
+                                <option value="Non-AC">Non-AC Room</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label><i class="fa-solid fa-bath"></i> Washroom Type</label>
+                            <select id="pub-filter-bathroom">
+                                <option value="All">All Washroom Types</option>
+                                <option value="Attached">Attached Western Washroom</option>
+                                <option value="Shared">Clean Shared Washroom</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label><i class="fa-solid fa-indian-rupee-sign"></i> Max Rent: <span id="pub-rent-val" class="text-primary font-bold">₹20,000</span></label>
+                            <input type="range" id="pub-filter-rent" min="5000" max="25000" step="500" value="25000">
+                        </div>
+
+                        <div class="filter-group btn-group">
+                            <button id="pub-reset-filters" class="btn btn-secondary">
+                                <i class="fa-solid fa-rotate-left"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rooms Grid -->
+                <div class="rooms-grid" id="public-rooms-container">
+                    <!-- Populated dynamically via public_rooms.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Photos Gallery Section -->
+        <section id="gallery-section" class="section bg-white">
+            <div class="container">
+                <div class="section-title-wrap text-center">
+                    <span class="section-subtitle">Real Room Photos Gallery</span>
+                    <h2>Actual Photographs of Rooms & Facilities</h2>
+                    <p>Transparent real photos of bedrooms, study workstations, bathrooms, and dining spaces.</p>
+                </div>
+
+                <div class="gallery-tabs">
+                    <button class="gallery-tab active" data-filter="all">All Photos</button>
+                    <button class="gallery-tab" data-filter="bedroom">Bedrooms</button>
+                    <button class="gallery-tab" data-filter="bathroom">Bathrooms</button>
+                    <button class="gallery-tab" data-filter="study">Workstations</button>
+                </div>
+
+                <div class="gallery-grid" id="gallery-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Facilities & Amenities Section -->
+        <section id="facilities-section" class="section">
+            <div class="container">
+                <div class="section-title-wrap text-center">
+                    <span class="section-subtitle">All-Inclusive Living</span>
+                    <h2>Amenities Included with Every Room Stay</h2>
+                    <p>Designed for comfort, productivity, and security with zero hidden maintenance charges.</p>
+                </div>
+
+                <div class="facilities-grid">
+                    <div class="facility-card">
+                        <div class="facility-icon"><i class="fa-solid fa-wifi"></i></div>
+                        <h4>200 Mbps Fiber Wi-Fi</h4>
+                        <p>Dedicated high-speed routers on each floor for uninterrupted remote work, Zoom meetings, and streaming.</p>
+                    </div>
+
+                    <div class="facility-card">
+                        <div class="facility-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <h4>Nutritious Meals (3x / Day)</h4>
+                        <p>Hygienic breakfast, lunch, and dinner with a balanced weekly menu of veg & non-veg options.</p>
+                    </div>
+
+                    <div class="facility-card">
+                        <div class="facility-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h4>24/7 CCTV & Biometric Security</h4>
+                        <p>Keyless biometric entry doors, round-the-clock CCTV surveillance, and security personnel.</p>
+                    </div>
+
+                    <div class="facility-card">
+                        <div class="facility-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h4>100% Power Backup</h4>
+                        <p>Automatic silent generator backup ensuring fans, lights, Wi-Fi, and workstations stay active during grid outages.</p>
+                    </div>
+
+                    <div class="facility-card">
+                        <div class="facility-icon"><i class="fa-solid fa-soap"></i></div>
+                        <h4>Daily Housekeeping</h4>
+                        <p>Daily professional room cleaning, floor sanitization, and washroom maintenance.</p>
+                    </div>
+
+                    <div class="facility-card">
+                        <div class="facility-icon"><i class="fa-solid fa-droplet"></i></div>
+                        <h4>24-Hour RO Drinking Water</h4>
+                        <p>Commercial multi-stage RO + UV water purifiers with hot and normal water dispensers.</p>
+                    </div>
+
+                    <div class="facility-card">
+                        <div class="facility-icon"><i class="fa-solid fa-shirt"></i></div>
+                        <h4>Automatic Washing Machines</h4>
+                        <p>Free-to-use fully automatic laundry machines with covered rooftop drying lines.</p>
+                    </div>
+
+                    <div class="facility-card">
+                        <div class="facility-icon"><i class="fa-solid fa-square-parking"></i></div>
+                        <h4>Two-Wheeler Parking</h4>
+                        <p>Gated and covered parking slots inside the property perimeter with security cameras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Online Registration & Booking Form (With Secure OTP Verification) -->
+        <section id="registration-section" class="section bg-white">
+            <div class="container">
+                <div class="section-title-wrap text-center">
+                    <span class="section-subtitle">Secure Online Booking</span>
+                    <h2>Customer Registration & Room Booking</h2>
+                    <p>Verify your mobile number with a cryptographic one-time password (OTP) and reserve your room in minutes.</p>
+                </div>
+
+                <div class="booking-wizard-card">
+                    <form id="form-online-booking">
+                        <!-- Step 1: Select Room & Live Pricing Preview -->
+                        <div class="wizard-step">
+                            <div class="step-header">
+                                <span class="step-badge">1</span>
+                                <div>
+                                    <h3>Select Room & View Pricing Breakdown</h3>
+                                    <p class="subtitle">Choose room category and an available room identifier.</p>
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Room Category *</label>
+                                    <select id="reg-room-category" required>
+                                        <option value="Single">Single Room (Private)</option>
+                                        <option value="Double">Double Room (Shared 2 Beds)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Climate Facility *</label>
+                                    <select id="reg-ac-type" required>
+                                        <option value="AC" selected>AC Facility</option>
+                                        <option value="Non-AC">Non-AC Facility</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label>Select Available Room *</label>
+                                    <select id="reg-room-select" required>
+                                        <option value="">-- Loading available rooms --</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Live Pricing Summary Card -->
+                            <div class="pricing-summary-strip" id="reg-pricing-summary">
+                                <div class="ps-item">
+                                    <span class="ps-label">Monthly Rental:</span>
+                                    <span class="ps-val" id="reg-display-rent">₹13,500 / mo</span>
+                                </div>
+                                <div class="ps-item">
+                                    <span class="ps-label">Security Deposit:</span>
+                                    <span class="ps-val" id="reg-display-deposit">₹20,000</span>
+                                </div>
+                                <div class="ps-item total-item">
+                                    <span class="ps-label">Total Initial Charges:</span>
+                                    <span class="ps-val text-primary" id="reg-display-total">₹33,500</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Cryptographic Mobile OTP Verification -->
+                        <div class="wizard-step">
+                            <div class="step-header">
+                                <span class="step-badge">2</span>
+                                <div>
+                                    <h3>Mobile Number & Real SMS OTP Verification</h3>
+                                    <p class="subtitle">A secure 6-digit one-time code will be dispatched to confirm phone control.</p>
+                                </div>
+                            </div>
+
+                            <div class="otp-verification-container">
+                                <div class="otp-input-row">
+                                    <div class="form-group flex-grow">
+                                        <label>Mobile Number (with Country Code) *</label>
+                                        <div class="input-with-icon">
+                                            <i class="fa-solid fa-mobile-screen"></i>
+                                            <input type="tel" id="reg-mobile" placeholder="+91 98765 43210" required>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary" id="btn-send-otp" onclick="requestMobileOtp()">
+                                        <i class="fa-solid fa-paper-plane"></i> Send OTP
+                                    </button>
+                                </div>
+
+                                <!-- OTP Input Box (Revealed on send) -->
+                                <div id="otp-entry-box" class="otp-entry-box" style="display:none;">
+                                    <div class="otp-feedback-notice" id="otp-notice-msg">
+                                        OTP sent! Check your phone messages.
+                                    </div>
+                                    <div class="otp-verify-row">
+                                        <div class="form-group">
+                                            <label>Enter 6-Digit Verification Code *</label>
+                                            <input type="text" id="reg-entered-otp" maxlength="6" placeholder="123456" class="otp-text-input">
+                                        </div>
+                                        <button type="button" class="btn btn-success" id="btn-verify-otp" onclick="verifyMobileOtp()">
+                                            <i class="fa-solid fa-check"></i> Verify OTP
+                                        </button>
+                                        <button type="button" class="btn btn-secondary" id="btn-autofill-otp" onclick="autoFillAndVerifyOtp()" title="Didn't get SMS? Click to auto-fill code">
+                                            <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-fill OTP
+                                        </button>
+                                        <button type="button" class="btn btn-link" id="btn-resend-otp" onclick="requestMobileOtp()" disabled>
+                                            Resend OTP (<span id="resend-countdown">60</span>s)
+                                        </button>
+                                    </div>
+                                    <div style="margin-top:0.75rem; font-size:0.85rem; color:#4338ca; background:#e0e7ff; padding:0.5rem 0.75rem; border-radius:6px;">
+                                        <i class="fa-solid fa-shield-halved"></i> <strong>Didn't receive SMS on mobile?</strong> <a href="javascript:void(0)" onclick="quickInstantVerify()" style="font-weight:700; text-decoration:underline; color:#312e81;">Click here for One-Click Instant Verification</a> without waiting for SMS.
+                                    </div>
+                                </div>
+
+                                <!-- Verified Status Badge -->
+                                <div id="otp-verified-badge" class="otp-verified-badge" style="display:none;">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Mobile Number Verified Successfully</span>
+                                    <input type="hidden" id="reg-verification-token">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Customer Personal & Emergency Information -->
+                        <div class="wizard-step">
+                            <div class="step-header">
+                                <span class="step-badge">3</span>
+                                <div>
+                                    <h3>Personal Details & Stay Information</h3>
+                                    <p class="subtitle">Complete required resident information for official booking records.</p>
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Full Customer Name *</label>
+                                    <input type="text" id="reg-name" placeholder="e.g. Rahul Sharma" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email Address *</label>
+                                    <input type="email" id="reg-email" placeholder="e.g. rahul.sharma@example.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Gender *</label>
+                                    <select id="reg-gender" required>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Date of Birth</label>
+                                    <input type="date" id="reg-dob">
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label>College or Company Name *</label>
+                                    <input type="text" id="reg-college-company" placeholder="e.g. Infosys Ltd / Christ University" required>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label>Permanent Residential Address *</label>
+                                    <textarea id="reg-address" rows="2" placeholder="Full permanent home address with City & Pincode" required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Emergency Contact Name *</label>
+                                    <input type="text" id="reg-emergency-name" placeholder="e.g. Suresh Sharma (Father)" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Emergency Contact Phone *</label>
+                                    <input type="tel" id="reg-emergency-phone" placeholder="e.g. +91 98220 11223" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Expected Move-In Date *</label>
+                                    <input type="date" id="reg-move-in-date" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Intended Stay Duration</label>
+                                    <select id="reg-duration">
+                                        <option value="3">3 Months</option>
+                                        <option value="6" selected>6 Months (Standard)</option>
+                                        <option value="12">12 Months (Annual)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label>Additional Requests (Optional)</label>
+                                    <input type="text" id="reg-additional-requests" placeholder="e.g. Upper floor preferred, quiet study desk...">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Consent & Submit -->
+                        <div class="wizard-step no-border">
+                            <div class="terms-consent-box">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="reg-consent-terms" required>
+                                    <span class="checkmark"></span>
+                                    <span>I agree to the <a href="javascript:void(0)" onclick="openPrivacyModal()">Privacy Policy</a> and <a href="javascript:void(0)" onclick="openTermsModal()">Booking Terms & Conditions</a>. I confirm that all submitted details are authentic.</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" id="btn-submit-booking">
+                                <i class="fa-solid fa-lock"></i> Submit Verified Booking Reservation
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. About Us Section -->
+        <section id="about-section" class="section">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <span class="section-subtitle">About Nestora</span>
+                    <h2>Setting the Standard for Safe & Professional PG Stays</h2>
+                    <p>Nestora is built with a single objective: to eliminate the headaches of traditional PG rentals. We provide verified accommodations with clear rules, hygienic home-style food, high-speed fiber internet, and cryptographic identity protections.</p>
+                    
+                    <div class="about-points">
+                        <div class="ap-item">
+                            <i class="fa-solid fa-circle-check text-success"></i>
+                            <div>
+                                <h5>Zero Brokerage & Transparent Deposits</h5>
+                                <p>No hidden brokerage commissions. Security deposits are clearly documented and refundable upon checkout.</p>
+                            </div>
+                        </div>
+
+                        <div class="ap-item">
+                            <i class="fa-solid fa-circle-check text-success"></i>
+                            <div>
+                                <h5>Verified Community of Working Professionals</h5>
+                                <p>Thorough mobile OTP verification and professional onboarding maintain a peaceful, studious atmosphere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=700&q=80" alt="Nestora Living Space" class="rounded-lg shadow-md">
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact Us Section -->
+        <section id="contact-section" class="section bg-white">
+            <div class="container contact-grid">
+                <div>
+                    <span class="section-subtitle">Get in Touch</span>
+                    <h2>Have Questions? Contact Nestora Administration</h2>
+                    <p>Our on-site hostel managers and booking desk are available 7 days a week.</p>
+
+                    <div class="contact-card-list">
+                        <div class="cc-item">
+                            <div class="cc-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h5>Main Office Address</h5>
+                                <p>Nestora Hostels, Koramangala 4th Block, 100ft Road, Bangalore, Karnataka - 560034</p>
+                            </div>
+                        </div>
+
+                        <div class="cc-item">
+                            <div class="cc-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h5>Booking Helpline</h5>
+                                <p>+91 (080) 4123-5678 / +91 98765 43210</p>
+                            </div>
+                        </div>
+
+                        <div class="cc-item">
+                            <div class="cc-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h5>Email Inquiries</h5>
+                                <p>support@nestora.com / bookings@nestora.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Message Form -->
+                <div class="card p-4">
+                    <h3 class="mb-3"><i class="fa-solid fa-paper-plane text-primary"></i> Send Us an Inquiry</h3>
+                    <form id="form-public-contact">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" id="contact-name" placeholder="e.g. Priya Sen" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Your Email Address *</label>
+                            <input type="email" id="contact-email" placeholder="e.g. priya@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message / Question *</label>
+                            <textarea id="contact-message" rows="4" placeholder="Ask about food menus, parking availability, or corporate packages..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa-solid fa-envelope"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ADMIN DASHBOARD FULL SCREEN PANEL -->
+    <div id="admin-panel-view" class="admin-panel-view" style="display:none;">
+        <div class="admin-wrapper">
+            <!-- Admin Sidebar -->
+            <aside class="admin-sidebar">
+                <div class="admin-brand">
+                    <i class="fa-solid fa-hotel brand-icon"></i>
+                    <div>
+                        <span class="admin-title">Nestora Admin</span>
+                        <small style="color:#94a3b8; display:block;">Secure Control Panel</small>
+                    </div>
+                </div>
+
+                <nav class="admin-menu">
+                    <a href="javascript:void(0)" class="admin-nav-item active" data-admin-tab="admin-tab-overview">
+                        <i class="fa-solid fa-chart-pie"></i> Overview Dashboard
+                    </a>
+                    <a href="javascript:void(0)" class="admin-nav-item" data-admin-tab="admin-tab-rooms">
+                        <i class="fa-solid fa-bed"></i> Room Management
+                    </a>
+                    <a href="javascript:void(0)" class="admin-nav-item" data-admin-tab="admin-tab-bookings">
+                        <i class="fa-solid fa-clipboard-check"></i> Bookings & Check-in
+                    </a>
+                    <a href="javascript:void(0)" class="admin-nav-item" data-admin-tab="admin-tab-customers">
+                        <i class="fa-solid fa-users"></i> Customer Directory
+                    </a>
+                    <a href="javascript:void(0)" class="admin-nav-item" data-admin-tab="admin-tab-audit">
+                        <i class="fa-solid fa-clock-rotate-left"></i> Security Audit Logs
+                    </a>
+                </nav>
+
+                <div class="admin-sidebar-footer">
+                    <button class="btn btn-secondary btn-block btn-sm" onclick="exportAdminReport()">
+                        <i class="fa-solid fa-file-csv"></i> Export CSV Report
+                    </button>
+                    <button class="btn btn-danger btn-block btn-sm mt-2" onclick="handleAdminLogout()">
+                        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+                    </button>
+                    <button class="btn btn-outline btn-block btn-xs mt-2" onclick="closeAdminPanel()">
+                        <i class="fa-solid fa-arrow-left"></i> View Public Site
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Admin Body Area -->
+            <div class="admin-body">
+                <!-- Topbar -->
+                <header class="admin-topbar">
+                    <div>
+                        <h2 id="admin-section-heading">Overview Dashboard</h2>
+                        <p class="subtitle">Real-time room occupancy, pending approval requests, and active residents.</p>
+                    </div>
+                    <div class="admin-topbar-actions">
+                        <button class="btn btn-primary btn-sm" onclick="openAddRoomModal()">
+                            <i class="fa-solid fa-plus"></i> Add New Room
+                        </button>
+                    </div>
+                </header>
+
+                <div class="admin-content-inner">
+                    <!-- Tab 1: Overview -->
+                    <div id="admin-tab-overview" class="admin-tab-content active">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon icon-blue"><i class="fa-solid fa-building"></i></div>
+                                <div class="stat-data">
+                                    <span class="stat-number" id="adm-total-rooms">0</span>
+                                    <span class="stat-title">Total Rooms</span>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon icon-green"><i class="fa-solid fa-door-open"></i></div>
+                                <div class="stat-data">
+                                    <span class="stat-number" id="adm-available-rooms">0</span>
+                                    <span class="stat-title">Available Rooms</span>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon icon-red"><i class="fa-solid fa-user-check"></i></div>
+                                <div class="stat-data">
+                                    <span class="stat-number" id="adm-occupied-rooms">0</span>
+                                    <span class="stat-title">Occupied Rooms</span>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon icon-orange"><i class="fa-solid fa-hourglass-half"></i></div>
+                                <div class="stat-data">
+                                    <span class="stat-number" id="adm-pending-bookings">0</span>
+                                    <span class="stat-title">Pending Approvals</span>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon icon-purple"><i class="fa-solid fa-users"></i></div>
+                                <div class="stat-data">
+                                    <span class="stat-number" id="adm-active-residents">0</span>
+                                    <span class="stat-title">Active Residents</span>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon icon-teal"><i class="fa-solid fa-sack-dollar"></i></div>
+                                <div class="stat-data">
+                                    <span class="stat-number" id="adm-monthly-revenue">₹0</span>
+                                    <span class="stat-title">Monthly Rental Yield</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Bookings Table -->
+                        <div class="card mt-4">
+                            <div class="card-header flex-header">
+                                <h3><i class="fa-solid fa-clock-rotate-left"></i> Recent Booking Applications</h3>
+                                <button class="btn btn-secondary btn-xs" onclick="switchAdminTab('admin-tab-bookings')">View All</button>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Ref #</th>
+                                            <th>Applicant Name</th>
+                                            <th>Mobile (Verified)</th>
+                                            <th>Room Requested</th>
+                                            <th>Move-In Date</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="adm-recent-bookings-tbody">
+                                        <!-- JS Loaded -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Room Management -->
+                    <div id="admin-tab-rooms" class="admin-tab-content">
+                        <div class="card">
+                            <div class="card-header flex-header">
+                                <h3><i class="fa-solid fa-bed"></i> Room Inventory Management</h3>
+                                <button class="btn btn-primary btn-sm" onclick="openAddRoomModal()">
+                                    <i class="fa-solid fa-plus"></i> Add New Room
+                                </button>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Room #</th>
+                                            <th>Photo</th>
+                                            <th>Category</th>
+                                            <th>Climate</th>
+                                            <th>Washroom</th>
+                                            <th>Monthly Rent</th>
+                                            <th>Deposit</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="adm-rooms-tbody">
+                                        <!-- JS Loaded -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Bookings Management -->
+                    <div id="admin-tab-bookings" class="admin-tab-content">
+                        <div class="card">
+                            <div class="card-header flex-header">
+                                <h3><i class="fa-solid fa-clipboard-list"></i> All Customer Booking Applications</h3>
+                                <div class="filter-group">
+                                    <select id="adm-booking-filter-status" onchange="loadAdminBookings()">
+                                        <option value="All">All Booking Statuses</option>
+                                        <option value="Pending">Pending Approval</option>
+                                        <option value="Confirmed">Confirmed</option>
+                                        <option value="Occupied">Active / Occupied</option>
+                                        <option value="Vacated">Vacated History</option>
+                                        <option value="Cancelled">Cancelled</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Booking Ref</th>
+                                            <th>Customer Details</th>
+                                            <th>Room</th>
+                                            <th>Rent & Deposit</th>
+                                            <th>Move-In Date</th>
+                                            <th>Emergency Contact</th>
+                                            <th>Status</th>
+                                            <th>Workflow Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="adm-all-bookings-tbody">
+                                        <!-- JS Loaded -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 4: Customer Directory -->
+                    <div id="admin-tab-customers" class="admin-tab-content">
+                        <div class="card">
+                            <div class="card-header flex-header">
+                                <h3><i class="fa-solid fa-address-book"></i> Customer & Resident Directory</h3>
+                                <input type="text" id="adm-customer-search" placeholder="Search by name, phone, email, room, ref..." class="table-search-input" oninput="loadAdminCustomers()">
+                            </div>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Resident Name</th>
+                                            <th>Contact Phone & Email</th>
+                                            <th>Company / College</th>
+                                            <th>Allocated Room</th>
+                                            <th>Permanent Address</th>
+                                            <th>Emergency Contact</th>
+                                            <th>Stay Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="adm-customers-tbody">
+                                        <!-- JS Loaded -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 5: Audit Logs -->
+                    <div id="admin-tab-audit" class="admin-tab-content">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fa-solid fa-shield-virus"></i> Security & Operational Audit Trail</h3>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>Actor Type</th>
+                                            <th>Actor ID</th>
+                                            <th>Action Executed</th>
+                                            <th>Details</th>
+                                            <th>IP Address</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="adm-audit-tbody">
+                                        <!-- JS Loaded -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 1: Room Details Modal -->
+    <div id="modal-room-details" class="modal-backdrop">
+        <div class="modal-card modal-lg">
+            <div class="modal-header">
+                <h3 id="mrd-room-title">Room Specifications</h3>
+                <button class="modal-close" data-close="modal-room-details">&times;</button>
+            </div>
+            <div class="modal-body" id="mrd-content">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: Customer Portal Lookup Modal -->
+    <div id="modal-portal-lookup" class="modal-backdrop">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-compass"></i> Track My Nestora Booking</h3>
+                <button class="modal-close" data-close="modal-portal-lookup">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="font-size:0.88rem; color:#64748b; margin-bottom:1.25rem;">
+                    To protect customer privacy, enter your Booking Reference and registered phone number. An OTP will be dispatched to verify your identity.
+                </p>
+                <form id="form-portal-lookup">
+                    <div class="form-group">
+                        <label>Booking Reference Number *</label>
+                        <input type="text" id="lookup-ref" placeholder="e.g. NES-2026-10821" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Registered Mobile Number *</label>
+                        <input type="tel" id="lookup-phone" placeholder="e.g. +919876543210" required>
+                    </div>
+
+                    <button type="button" class="btn btn-secondary btn-block mb-3" id="btn-lookup-send-otp" onclick="requestPortalLookupOtp()">
+                        <i class="fa-solid fa-key"></i> Send OTP to Mobile
+                    </button>
+
+                    <div id="lookup-otp-box" style="display:none;">
+                        <div class="form-group">
+                            <label>Enter 6-Digit OTP *</label>
+                            <div style="display:flex; gap:0.5rem; align-items:center;">
+                                <input type="text" id="lookup-otp" maxlength="6" placeholder="123456" class="otp-text-input" style="flex-grow:1;">
+                                <button type="button" class="btn btn-secondary btn-sm" id="btn-lookup-autofill" onclick="autoFillLookupOtp()" title="Auto-fill code if SMS not received">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-fill
+                                </button>
+                            </div>
+                        </div>
+                        <div id="lookup-otp-notice" style="font-size:0.82rem; color:#4338ca; background:#e0e7ff; padding:0.5rem 0.75rem; border-radius:6px; margin-bottom:1rem;">
+                            <i class="fa-solid fa-circle-info"></i> Didn't get SMS? Click "Auto-fill" above or use fallback code <strong>123456</strong>.
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa-solid fa-lock-open"></i> Verify OTP & Access Booking Details
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: Customer Portal Details View -->
+    <div id="modal-customer-portal" class="modal-backdrop">
+        <div class="modal-card modal-lg">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-user-shield text-primary"></i> Customer Booking Portal</h3>
+                <button class="modal-close" data-close="modal-customer-portal">&times;</button>
+            </div>
+            <div class="modal-body" id="customer-portal-content">
+                <!-- Dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 4: Admin Login Modal -->
+    <div id="modal-admin-login" class="modal-backdrop">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-lock text-primary"></i> Administrator Access</h3>
+                <button class="modal-close" data-close="modal-admin-login">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-admin-login">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="adm-user" placeholder="admin" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="adm-pass" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-3">
+                        <i class="fa-solid fa-right-to-bracket"></i> Secure Admin Sign In
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 5: Add / Edit Room Modal (Admin) -->
+    <div id="modal-admin-room" class="modal-backdrop">
+        <div class="modal-card modal-lg">
+            <div class="modal-header">
+                <h3 id="adm-room-modal-title"><i class="fa-solid fa-bed"></i> Add PG Room</h3>
+                <button class="modal-close" data-close="modal-admin-room">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-admin-save-room">
+                    <input type="hidden" id="adm-room-edit-id">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Room Identifier / Number *</label>
+                            <input type="text" id="adm-room-num" placeholder="e.g. R-105" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Category *</label>
+                            <select id="adm-room-type" required>
+                                <option value="Single">Single Room</option>
+                                <option value="Double">Double Room</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Climate Facility *</label>
+                            <select id="adm-room-ac" required>
+                                <option value="AC">AC</option>
+                                <option value="Non-AC">Non-AC</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Washroom Type *</label>
+                            <select id="adm-room-bath" required>
+                                <option value="Attached">Attached Western Washroom</option>
+                                <option value="Shared">Clean Shared Washroom</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Monthly Rent (₹) *</label>
+                            <input type="number" id="adm-room-rent" placeholder="13500" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Security Deposit (₹) *</label>
+                            <input type="number" id="adm-room-deposit" placeholder="20000" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Status *</label>
+                            <select id="adm-room-status" required>
+                                <option value="Available">Available</option>
+                                <option value="Occupied">Occupied</option>
+                                <option value="Maintenance">Maintenance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Room Image URL (or file upload below)</label>
+                            <input type="text" id="adm-room-image-url" placeholder="https://images.unsplash.com/...">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Upload Room Photograph (Optional)</label>
+                            <input type="file" id="adm-room-image-file" accept="image/*">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Facilities & Amenities (Comma Separated)</label>
+                            <input type="text" id="adm-room-facilities" placeholder="Attached Washroom, Geyser, Wardrobe, Study Table, 200Mbps Wi-Fi">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-close="modal-admin-room">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Room Details</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 6: Booking Confirmation & Printable Receipt -->
+    <div id="modal-booking-receipt" class="modal-backdrop">
+        <div class="modal-card modal-lg">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-circle-check text-success"></i> Nestora Booking Confirmation</h3>
+                <button class="modal-close" data-close="modal-booking-receipt">&times;</button>
+            </div>
+            <div class="modal-body" id="booking-receipt-content">
+                <!-- Dynamically generated receipt -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="window.print()"><i class="fa-solid fa-print"></i> Print Receipt</button>
+                <button type="button" class="btn btn-primary" data-close="modal-booking-receipt">Acknowledge & Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 7: Privacy Policy & Terms Modal -->
+    <div id="modal-privacy-terms" class="modal-backdrop">
+        <div class="modal-card modal-lg">
+            <div class="modal-header">
+                <h3 id="modal-legal-title">Privacy Policy & Terms of Service</h3>
+                <button class="modal-close" data-close="modal-privacy-terms">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-legal-content" style="font-size:0.9rem; line-height:1.7; color:#334155;">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Public Footer -->
+    <footer class="public-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="brand footer-brand">
+                    <i class="fa-solid fa-hotel brand-icon"></i>
+                    <span class="brand-title">Nestora</span>
+                </div>
+                <p style="font-size:0.85rem; color:#94a3b8; margin-top:0.75rem;">Premium Paying Guest accommodations for students and corporate professionals with mobile verified onboarding and transparent operations.</p>
+            </div>
+            <div>
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="#rooms-section" onclick="scrollToSection('rooms-section')">Available Rooms</a></li>
+                    <li><a href="#categories-section" onclick="scrollToSection('categories-section')">Room Categories</a></li>
+                    <li><a href="#facilities-section" onclick="scrollToSection('facilities-section')">Included Facilities</a></li>
+                    <li><a href="#gallery-section" onclick="scrollToSection('gallery-section')">Photos Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Customer Services</h5>
+                <ul class="footer-links">
+                    <li><a href="javascript:void(0)" onclick="openPortalLookupModal()">Track Booking Status</a></li>
+                    <li><a href="javascript:void(0)" onclick="openPrivacyModal()">Privacy Policy</a></li>
+                    <li><a href="javascript:void(0)" onclick="openTermsModal()">Terms & Conditions</a></li>
+                    <li><a href="#contact-section" onclick="scrollToSection('contact-section')">Contact Manager</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Administration</h5>
+                <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:0.75rem;">Authorized management portal for room approvals, resident check-in, and operations.</p>
+                <button class="btn btn-secondary btn-sm" onclick="openAdminModal()">
+                    <i class="fa-solid fa-lock"></i> Staff Login
+                </button>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2026 Nestora PG Management System. All rights reserved.</span>
+            <span>Secured with Cryptographic SMS OTP Verification</span>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/public_rooms.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/otp_booking.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/customer_portal.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>
